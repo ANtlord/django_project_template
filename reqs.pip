@@ -1,0 +1,7 @@
+Django==1.6.5
+South==0.8.3
+django-compressor==1.4
+psycopg2
+django-ckeditor-updated==4.4.0
+django-sitetree==1.0.0
+django-widget-tweaks==1.3
