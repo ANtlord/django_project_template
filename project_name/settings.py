@@ -78,7 +78,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'smirik', 'static'),
+    os.path.join(BASE_DIR, '{{ project_name }}', 'static'),
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',  # Gets static from directory 'static' of every application.
@@ -101,7 +101,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
 )
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'smirik', 'templates')
+    os.path.join(BASE_DIR, '{{ project_name }}', 'templates')
 )
 
 CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'user')
@@ -125,7 +125,7 @@ USE_L10N = True
 USE_TZ = True
 
 try:
-    from smirik.local_settings import *
+    from {{ project_name }}.local_settings import *
 except ImportError: pass
 
 TEMPLATE_DEBUG = DEBUG
