@@ -33,6 +33,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'south',
+    'compressor',
+    'ckeditor',
+    'sitetree',
+    'widget_tweaks',
+    'debug_toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
